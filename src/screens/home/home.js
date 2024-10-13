@@ -28,52 +28,40 @@ const Home = ({ navigation }) => {
       <View
         style={{
           backgroundColor: getRandomColor()?.hex,
-          borderWidth: 4,
-          borderColor: getRandomColor()?.borderColor,
-          marginVertical: 4,
           marginHorizontal: 4,
-          paddingHorizontal: 4,
+          paddingHorizontal: 12,
           paddingVertical: 8,
           borderRadius: 4,
-          width: "47%",
+
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Text
-          numberOfLines={1}
+          // numberOfLines={1}
           ellipsizeMode="tail"
           style={{
             fontSize: 16,
             fontWeight: "bold",
-            paddingVertical: 2,
-            paddingHorizontal: 2,
+            paddingVertical: 4,
+            paddingHorizontal: 15,
           }}
         >
           {item.name}
         </Text>
         <Text
-          numberOfLines={1}
+          // numberOfLines={1}
           ellipsizeMode="tail"
           style={{
             fontSize: 16,
             fontWeight: "normal",
-            paddingVertical: 2,
-            paddingHorizontal: 2,
+            paddingVertical: 4,
+            paddingHorizontal: 15,
           }}
         >
           {item.email}
-        </Text>
-        <Text
-          numberOfLines={1}
-          ellipsizeMode="tail"
-          style={{
-            fontSize: 12,
-            fontWeight: "normal",
-            paddingVertical: 2,
-            paddingHorizontal: 2,
-            alignSelf: "flex-end",
-          }}
-        >
-          {item.gender}
         </Text>
       </View>
     );
@@ -108,15 +96,7 @@ const Home = ({ navigation }) => {
           }}
           showsVerticalScrollIndicator={false}
         >
-          <View
-            style={
-              {
-                // flex: 1,
-                // flexDirection: "row",
-                // flexWrap: "wrap",
-              }
-            }
-          >
+          <View style={{ flex: 1 }}>
             <FlatList
               horizontal
               data={DATA}
